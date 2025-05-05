@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deteksi Masker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="/static/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fas fa-mask"></i> Mask Detection</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#why-mask">Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#types-mask">Jenis</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#camera-detection">Deteksi</a>
+          </li>
+        </ul>
+        <button class="btn btn-outline-light btn-sm ms-3" id="themeToggle">
+          <span id="themeIcon" class="theme-icon">🌙</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mengapa Penting Menggunakan Masker -->
+  <div class="text-center">
+    <img src="/static/images/mask.jpg" alt="Mengapa Penting Menggunakan Masker" class="img-fluid full-width-img">
+  </div>
+  <div id="why-mask" class="container info-section">
+    <h2 class="text-center">Mengapa Penting Menggunakan Masker?</h2>
+    <p class="animate__animated animate__fadeInUp">
+      Masker adalah salah satu alat pelindung diri yang efektif untuk mencegah penyebaran virus dan bakteri. 
+      Dengan menggunakan masker, Anda dapat melindungi diri sendiri dan orang lain dari risiko infeksi.
+    </p>
+  </div>
+
+  <!-- Jenis-Jenis Masker -->
+  <div id="types-mask" class="container info-section mt-5">
+    <h2 class="text-center">Jenis-Jenis Masker</h2>
+    <div class="row">
+      <div class="col-md-4 text-center">
+        <img src="\static\images\image1.png" alt="Masker Kain" class="img-fluid mb-2">
+        <h5>Masker Kain</h5>
+        <p>Masker yang dapat digunakan kembali setelah dicuci. Cocok untuk penggunaan sehari-hari.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="\static\images\image2.png" alt="Masker Bedah" class="img-fluid mb-2">
+        <h5>Masker Bedah</h5>
+        <p>Masker sekali pakai yang sering digunakan oleh tenaga medis.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img src="\static\images\image.png" alt="Masker N95" class="img-fluid mb-2">
+        <h5>Masker N95</h5>
+        <p>Masker dengan tingkat filtrasi tinggi, ideal untuk lingkungan berisiko tinggi.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cara Menggunakan Masker dengan Benar -->
+  <div id="how-to-use" class="container info-section mt-5">
+    <h2 class="text-center">Cara Menggunakan Masker dengan Benar</h2>
+    <ol>
+      <li>Cuci tangan sebelum memakai masker.</li>
+      <li>Pastikan masker menutupi hidung, mulut, dan dagu.</li>
+      <li>Hindari menyentuh bagian depan masker saat digunakan.</li>
+      <li>Ganti masker jika sudah basah atau kotor.</li>
+    </ol>
+  </div>
+
+  <!-- Deteksi Masker Menggunakan Kamera -->
+  <div id="camera-detection" class="container text-center mt-5">
+    <h1 class="mb-4 mt-2">Deteksi Masker Menggunakan Kamera</h1>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <video autoplay id="video" class="img-fluid mb-3"></video>
+        <canvas id="canvas" width="640" height="480" style="display:none;"></canvas>
+      </div>
+    </div>
+    <div id="result" class="mt-4"></div>
+  </div>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="btn" style="position: fixed; bottom: 20px; right: 20px; display: none;">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Footer -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p class="mb-1">© 2025 Deteksi Masker. All rights reserved.</p>
+      <p class="small mb-0">Developed with ❤️ by Kelompok 1</p>
+      <div class="social-icons mt-3">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Theme toggle
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlTag = document.documentElement;
+
+    function updateIcon(theme) {
+      if (theme === 'dark') {
+        themeIcon.textContent = '🌞';
+      } else {
+        themeIcon.textContent = '🌙'; 
+      }
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = htmlTag.getAttribute('data-bs-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      htmlTag.setAttribute('data-bs-theme', newTheme);
+      updateIcon(newTheme);
+    });
+
+    // Auto detect initial theme
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = prefersDark ? 'dark' : 'light';
+    htmlTag.setAttribute('data-bs-theme', initialTheme);
+    updateIcon(initialTheme);
+
+    // Scroll to Top Button
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+      scrollToTopBtn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    });
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

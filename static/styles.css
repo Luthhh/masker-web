@@ -1,0 +1,186 @@
+/* Default (light theme) styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #f3f4f6, #e3e4e8);
+    color: #343a40; /* Warna teks default */
+    transition: background 0.3s ease, color 0.3s ease;
+}
+#video, #result img {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+#video:hover, #result img:hover {
+    transform: scale(1.05);
+}
+footer {
+    padding: 20px 0;
+    background: linear-gradient(90deg, 
+    #6a11cb, #2575fc);
+    color: #fff;
+    text-align: center;
+}
+.navbar {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #fff !important;
+    transition: color 0.3s ease;
+}
+.navbar-brand:hover {
+    color: #f8f9fa !important;
+}
+.theme-icon {
+    font-size: 1.4rem;
+}
+.info-section {
+    padding: 40px 0;
+}
+.info-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #343a40;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+.info-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    margin: 10px auto 0;
+}
+.info-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+.info-section img {
+    max-width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.info-section img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+.btn-outline-light {
+    border-color: #fff;
+    color: #fff;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+.btn-outline-light:hover {
+    background: #fff;
+    color: #343a40;
+}
+ol li {
+    margin-bottom: 10px;
+}
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #ffdd57;
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: #f8f9fa !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffdd57 !important;
+}
+
+.navbar-toggler {
+    border-color: #f8f9fa;
+}
+
+/* Dark theme styles */
+[data-bs-theme="dark"] body {
+    background: linear-gradient(135deg, #343a40, #212529);
+    color: #f8f9fa; /* Warna teks untuk tema gelap */
+}
+
+[data-bs-theme="dark"] .info-section h2 {
+    color: #f8f9fa; /* Warna heading untuk tema gelap */
+}
+
+[data-bs-theme="dark"] .info-section p {
+    color: #d1d1d1; /* Warna paragraf untuk tema gelap */
+}
+
+[data-bs-theme="dark"] footer {
+    background: #212529;
+    color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .navbar-dark {
+    background-color: #212529 !important;
+}
+
+[data-bs-theme="dark"] .btn-outline-light {
+    border-color: #f8f9fa;
+    color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .btn-outline-light:hover {
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+/* Pastikan gambar menempel dengan header */
+.full-width-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+    object-fit: cover;
+    border-radius: 0; /* Hilangkan sudut membulat */
+    box-shadow: none; /* Hilangkan bayangan jika tidak diperlukan */
+}
+
+.navbar + .text-center {
+    margin-top: 0; /* Hilangkan jarak antara navbar dan gambar */
+}
+
+#why-mask img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#scrollToTop {
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#scrollToTop:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
